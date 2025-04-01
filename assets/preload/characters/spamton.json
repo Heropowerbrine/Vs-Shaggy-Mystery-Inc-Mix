@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-46,
+				-256
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "matt up"
+		},
+		{
+			"offsets": [
+				-116,
+				-314
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "matt down"
+		},
+		{
+			"offsets": [
+				-41,
+				-297
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "matt right"
+		},
+		{
+			"offsets": [
+				95,
+				-297
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "matt left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-5,
+				-260
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "matt idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "MASK/menu/arena_/spamtonmatt",
+	"position": [
+		-40,
+		60
+	],
+	"healthicon": "matt",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		140,
+		20
+	],
+	"camera_position": [
+		110,
+		270
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,7 @@
+export/
+.vscode/
+APIStuff.hx
+.haxelib/
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/MattV4/v16/.suo

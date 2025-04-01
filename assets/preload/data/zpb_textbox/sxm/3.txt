@@ -1,0 +1,22 @@
+matt:ang:1:PUTA QUE PARIU!!!!
+rsh:con:-1:Ei, cara, que que ta pegando?
+matt:ang:1:EU NÃO CONSIGO VENCER DESSE#FUDIDO!!!!!
+rsh:con:-1:Isso é um pouco rude...
+rsh:ser:-1:Não precisa ficar irritado, esse cara#é fisicamente impossível de perder.
+matt:down:1:...
+matt:down:1:...Que?
+rsh:ser:-1:"Aquele moleque" é o boyfriend.
+rsh:ser:-1:Todo ser neste universo#que o desafiou#foi derrotado e tals.
+rsh:ser:-1:Isso se da pois, toda vez que ele perde#ele morre.
+matt:normal:1:!!!
+rsh:smug:-1:Mas a morte não é um fim para ele, toda#vez que ele morre, ele tem a chance de#retornar à um certo estagio.
+rsh:smug:-1:Oque significa que por nossa perspectiva,#Não tem escapatória do jeito que#o tempo continua quando ele retorna.
+matt:down:1:Oxi
+matt:ang:1:Eu estive lutando por nada?
+rsh:smug:-1:Seu poder aumentou drasticamente.#Eu não chamaria isso de nada.
+rsh:normal:-1:Oh, eu vou te contar um negocio.
+rsh:smug:-1:Nós não podemos derrota-lo mas#podemos da-lo um grande desafio.
+matt:normal:1:Ce quer cantar junto?
+rsh:smug:-1:Sim cara! com meu poder e sua velocidade,#ele vai ter um tempo ruim.
+rsh:ser:-1:Se isso te faz melhor de alguma forma...
+matt:up:1:Quer saber? SIMBORA!

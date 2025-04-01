@@ -1,0 +1,14 @@
+matt:normal:-1:Hey.
+matt:normal:-1:Vine a esta mansión para aceptar tu#entrenamiento.
+rsh:normal:1:Claro que sí, hombre!
+matt:normal:-1:Asi que, como entrenaremos?
+rsh:smug:1:Voy a canalizar algo de tu poder a través#de una batalla de canto común.
+rsh:normal:1:No sentirás algo distinto, porque la#canalización de poder no genera sentimientos.
+matt:normal:-1:...
+matt:down:-1:Solo quiero derrotar a ese enano.#esto realmente me ayudará?
+rsh:ser:1:Esto te ayudará a controlar mejor la#correlación de tu "dirección de canto"
+rsh:normal:1:Puedo sentir que ya tienes una muy#buena velocidad de canto.
+rsh:smug:1:Con esto... serás imparable!
+matt:normal:-1:jej
+rsh:smug:1:Pero primero, muestrame que tienes.
+matt:up:-1:Hagamoslo!

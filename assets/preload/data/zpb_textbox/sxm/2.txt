@@ -1,0 +1,7 @@
+matt:down:1:Olá de novo, moleque.
+matt:down:1:Se lembra de mim?
+bf:normal:-1:beep boop
+matt:ang:1:Agora tu vai sentir como eu me sinto.
+matt:down:1:Não tem jeito de me vencer desta vez.
+bf:burn:-1:bap
+matt:up:1:Pode apostar!

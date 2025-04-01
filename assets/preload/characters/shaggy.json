@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-55,
+				-35
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ShaggyIdle"
+		},
+		{
+			"offsets": [
+				-55,
+				-35
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle2",
+			"indices": [],
+			"name": "ShaggyIdle"
+		},
+		{
+			"offsets": [
+				58,
+				-175
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ShaggyDown"
+		},
+		{
+			"offsets": [
+				78,
+				-18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "ShaggyUp"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				170,
+				-186
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ShaggyLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-26
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ShaggyRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				140,
+				90
+			],
+			"loop": false,
+			"anim": "catch",
+			"fps": 30,
+			"name": "shaggy_catch",
+			"indices": []
+		},
+		{
+			"offsets": [
+				90,
+				100
+			],
+			"loop": false,
+			"anim": "hold",
+			"fps": 30,
+			"name": "shaggy_hold",
+			"indices": []
+		},
+		{
+			"offsets": [
+				90,
+				0
+			],
+			"loop": false,
+			"anim": "h_half",
+			"fps": 30,
+			"name": "shaggy_h_half",
+			"indices": []
+		},
+		{
+			"offsets": [
+				130,
+				0
+			],
+			"loop": false,
+			"anim": "fall",
+			"fps": 30,
+			"name": "shaggy_fall",
+			"indices": []
+		},
+		{
+			"offsets": [
+				110,
+				-123
+			],
+			"loop": false,
+			"anim": "kneel",
+			"fps": 30,
+			"name": "shaggy_half_ground",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/shaggy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "shaggy",
+	"flip_x": false,
+	"healthbar_colors": [
+		51,
+		114,
+		74
+	],
+	"camera_position": [
+		-20,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

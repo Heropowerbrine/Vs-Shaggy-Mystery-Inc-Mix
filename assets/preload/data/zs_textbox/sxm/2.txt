@@ -1,0 +1,7 @@
+matt:down:1:Hola de nuevo, chico.
+matt:down:1:Me recuerdas?
+bf:normal:-1:beep boop
+matt:ang:1:Ahora... verás como se siente.
+matt:down:1:No hay forma de que ganes esta vez.
+bf:burn:-1:bap
+matt:up:1:Oh, ahora verás!

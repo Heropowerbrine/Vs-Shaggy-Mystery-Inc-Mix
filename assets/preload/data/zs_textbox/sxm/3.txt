@@ -1,0 +1,22 @@
+matt:ang:1:CARAJO!!!!
+rsh:con:-1:Oye, que ocurre amigo?
+matt:ang:1:NO PUEDO VENCER A ESTE PEDAZO#DE MIERDA!!!!!
+rsh:con:-1:Eso es un poco grosero...
+rsh:ser:-1:No hay punto en arderte, este chico es#literalmente imposible de vencer.
+matt:down:1:...
+matt:down:1:...como?
+rsh:ser:-1:'Este chico' es boyfriend.
+rsh:ser:-1:Todo ser viviente que se enfrentó a el,#fue derrotado sin excepción.
+rsh:ser:-1:Eso es porque, cada vez que el pierde#una batalla... muere.
+matt:normal:1:!!!
+rsh:smug:-1:Pero la muerte no significa su fin,#cada vez que muere, tiene la oportunidad#de reiniciar el tiempo hacia un cierto momento.
+rsh:smug:-1:Eso significa que a nuestra perspectiva,#no hay forma posible en la que#el tiempo continue, despues de que#el sea derrotado.
+matt:down:1:que mierda
+matt:ang:1:He peleado por nada?
+rsh:smug:-1:Tu poder incrementó drasticamente hombre,#no llamaria eso un "nada".
+rsh:normal:-1:Hey, te diré algo.
+rsh:smug:-1:Tal vez no podemos derrotarlo,#pero te apuesto que podemos darle un reto.
+matt:normal:1:Te apetece cantar juntos?
+rsh:smug:-1:Claro hombre!,#con mi poder y tu velocidad,#definitivamente pasará un mal rato.
+rsh:ser:-1:Si eso te hace sentir mejor, claro...
+matt:up:1:Sabes que? hagamoslo!

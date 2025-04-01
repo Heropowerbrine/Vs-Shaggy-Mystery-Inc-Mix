@@ -1,0 +1,14 @@
+matt:normal:-1:Eae.
+matt:normal:-1:Eu vim pra essa mansão pra aceitar o#treinamento.
+rsh:normal:1:Beleza cara!
+matt:normal:-1:Então, como que a gente vai treinar?
+rsh:smug:1:Eu vo te passar um pouco de poder#por meio de uma batalha de canto.
+rsh:normal:1:Não vai ser muito diferente de cantar#normalmente contando que a canalização#de poder não transmite sensações.
+matt:normal:-1:...
+matt:down:-1:Eu só quero descer o cacete no moleque.#isso vai me ajudar com isso?
+rsh:ser:1:Isso vai te dar mais controle sobre a #coorelação da direção da tua voz.
+rsh:normal:1:Posso sentir que tu já tem uma grande#velocidade de canto.
+rsh:smug:1:Com isso ce vai ser tipo, Imparavel!!
+matt:normal:-1:Ha.
+rsh:smug:1:Primero, me mostra do que você é capaz.
+matt:up:-1:Simbora!

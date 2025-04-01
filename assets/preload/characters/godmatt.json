@@ -1,0 +1,114 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				86, -23
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "matt left note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-111, 8
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "matt down note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-105, 136
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "matt up note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-133, -51
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "matt right note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 20,
+			"anim": "idle",
+			"indices": [],
+			"name": "matt idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				153, 26
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "matt left miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75, -14
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "matt down miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8, 80
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "matt up miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-23, 23
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "matt right miss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/god_matt",
+	"position": [
+		-40,
+		320
+	],
+	"healthicon": "matt",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		152,
+		255
+	],
+	"camera_position": [
+		300,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

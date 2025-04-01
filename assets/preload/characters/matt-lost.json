@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				6,
+				4
+			],
+			"loop": false,
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "matt lose start",
+			"indices": []
+		},
+		{
+			"offsets": [
+				6,
+				4
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "matt lose start",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "matt lose loop",
+			"indices": []
+		},
+		{
+			"offsets": [
+				40,
+				9
+			],
+			"loop": false,
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "matt lose retry",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/matt_lost",
+	"position": [
+		-40,
+		320
+	],
+	"healthicon": "matt",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		152,
+		255
+	],
+	"camera_position": [
+		300,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

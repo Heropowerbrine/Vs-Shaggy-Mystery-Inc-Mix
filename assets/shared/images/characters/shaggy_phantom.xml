@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="shaggy_phantom.png" width="6468" height="4460" spritePadding="3" borderPadding="1">
+	<SubTexture name="IdleDance0000" x="1" y="1" width="487" height="807" frameX="0" frameY="-10" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0001" x="1" y="1" width="487" height="807" frameX="0" frameY="-10" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0002" x="1" y="1" width="487" height="807" frameX="0" frameY="-10" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0003" x="491" y="1" width="487" height="805" frameX="0" frameY="-13" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0004" x="491" y="1" width="487" height="805" frameX="0" frameY="-13" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0005" x="981" y="1" width="487" height="811" frameX="0" frameY="-6" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0006" x="981" y="1" width="487" height="811" frameX="0" frameY="-6" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0007" x="1471" y="1" width="487" height="815" frameX="0" frameY="-3" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0008" x="1471" y="1" width="487" height="815" frameX="0" frameY="-3" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0009" x="1471" y="1" width="487" height="815" frameX="0" frameY="-3" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0010" x="1961" y="1" width="487" height="818" frameX="0" frameY="0" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0011" x="1961" y="1" width="487" height="818" frameX="0" frameY="0" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="IdleDance0012" x="2451" y="1" width="487" height="813" frameX="0" frameY="-5" frameWidth="487" frameHeight="818"/>
+	<SubTexture name="ZephDown0000" x="2941" y="1" width="554" height="641" rotated="true" frameX="0" frameY="-53" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0001" x="3498" y="1" width="556" height="624" rotated="true" frameX="0" frameY="-51" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0002" x="3498" y="1" width="556" height="624" rotated="true" frameX="0" frameY="-51" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0003" x="4057" y="1" width="583" height="610" rotated="true" frameX="-6" frameY="-24" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0004" x="4057" y="1" width="583" height="610" rotated="true" frameX="-6" frameY="-24" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0005" x="4643" y="1" width="604" height="618" rotated="true" frameX="-3" frameY="-3" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0006" x="4643" y="1" width="604" height="618" rotated="true" frameX="-3" frameY="-3" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0007" x="5250" y="1" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0008" x="5860" y="1" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0009" x="1" y="822" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0010" x="1" y="822" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0011" x="1" y="822" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0012" x="1" y="822" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephDown0013" x="1" y="822" width="607" height="622" rotated="true" frameX="-1" frameY="0" frameWidth="642" frameHeight="607"/>
+	<SubTexture name="ZephLeft0000" x="611" y="822" width="748" height="895" frameX="0" frameY="-9" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0001" x="1362" y="822" width="751" height="895" frameX="0" frameY="-9" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0002" x="1362" y="822" width="751" height="895" frameX="0" frameY="-9" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0003" x="2116" y="822" width="758" height="897" frameX="-6" frameY="-7" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0004" x="2116" y="822" width="758" height="897" frameX="-6" frameY="-7" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0005" x="2877" y="822" width="778" height="902" frameX="-11" frameY="-2" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0006" x="2877" y="822" width="778" height="902" frameX="-11" frameY="-2" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0007" x="3658" y="822" width="786" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0008" x="4447" y="822" width="785" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0009" x="5235" y="822" width="787" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0010" x="5235" y="822" width="787" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0011" x="5235" y="822" width="787" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0012" x="5235" y="822" width="787" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephLeft0013" x="5235" y="822" width="787" height="904" frameX="-12" frameY="0" frameWidth="800" frameHeight="904"/>
+	<SubTexture name="ZephRight0000" x="1" y="1729" width="914" height="976" rotated="true" frameX="-40" frameY="0" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0001" x="918" y="1729" width="914" height="983" rotated="true" frameX="-38" frameY="0" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0002" x="918" y="1729" width="914" height="983" rotated="true" frameX="-38" frameY="0" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0003" x="1835" y="1729" width="911" height="957" rotated="true" frameX="-27" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0004" x="1835" y="1729" width="911" height="957" rotated="true" frameX="-27" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0005" x="2749" y="1729" width="911" height="957" rotated="true" frameX="-15" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0006" x="2749" y="1729" width="911" height="957" rotated="true" frameX="-15" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0007" x="3663" y="1729" width="911" height="967" rotated="true" frameX="-3" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0008" x="4577" y="1729" width="911" height="967" rotated="true" frameX="-3" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0009" x="5491" y="1729" width="911" height="968" rotated="true" frameX="0" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0010" x="5491" y="1729" width="911" height="968" rotated="true" frameX="0" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0011" x="5491" y="1729" width="911" height="968" rotated="true" frameX="0" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0012" x="5491" y="1729" width="911" height="968" rotated="true" frameX="0" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephRight0013" x="5491" y="1729" width="911" height="968" rotated="true" frameX="0" frameY="-3" frameWidth="1022" frameHeight="914"/>
+	<SubTexture name="ZephSpace0000" x="1" y="2715" width="604" height="1104" frameX="-15" frameY="-3" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0001" x="608" y="2715" width="605" height="1107" frameX="-14" frameY="0" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0002" x="608" y="2715" width="605" height="1107" frameX="-14" frameY="0" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0003" x="1216" y="2715" width="614" height="1105" frameX="-5" frameY="-2" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0004" x="1216" y="2715" width="614" height="1105" frameX="-5" frameY="-2" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0005" x="1833" y="2715" width="619" height="1096" frameX="0" frameY="-11" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0006" x="1833" y="2715" width="619" height="1096" frameX="0" frameY="-11" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0007" x="2455" y="2715" width="619" height="1085" frameX="0" frameY="-23" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0008" x="2455" y="2715" width="619" height="1085" frameX="0" frameY="-23" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0009" x="3077" y="2715" width="619" height="1078" frameX="0" frameY="-30" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0010" x="3077" y="2715" width="619" height="1078" frameX="0" frameY="-30" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0011" x="3077" y="2715" width="619" height="1078" frameX="0" frameY="-30" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0012" x="3077" y="2715" width="619" height="1078" frameX="0" frameY="-30" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephSpace0013" x="3077" y="2715" width="619" height="1078" frameX="0" frameY="-30" frameWidth="619" frameHeight="1108"/>
+	<SubTexture name="ZephUp0000" x="3699" y="2715" width="505" height="1178" frameX="-9" frameY="-1" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0001" x="4207" y="2715" width="519" height="1179" frameX="-7" frameY="0" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0002" x="4207" y="2715" width="519" height="1179" frameX="-7" frameY="0" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0003" x="4729" y="2715" width="550" height="1175" frameX="0" frameY="-4" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0004" x="5282" y="2715" width="550" height="1175" frameX="0" frameY="-4" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0005" x="5835" y="2715" width="562" height="1161" frameX="0" frameY="-18" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0006" x="1" y="3897" width="1161" height="562" rotated="true" frameX="0" frameY="-18" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0007" x="1165" y="3897" width="1155" height="561" rotated="true" frameX="0" frameY="-24" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0008" x="2323" y="3897" width="1155" height="561" rotated="true" frameX="0" frameY="-24" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0009" x="3481" y="3897" width="1154" height="551" rotated="true" frameX="0" frameY="-25" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0010" x="4638" y="3897" width="1154" height="551" rotated="true" frameX="0" frameY="-25" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0011" x="4638" y="3897" width="1154" height="551" rotated="true" frameX="0" frameY="-25" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0012" x="4638" y="3897" width="1154" height="551" rotated="true" frameX="0" frameY="-25" frameWidth="562" frameHeight="1179"/>
+	<SubTexture name="ZephUp0013" x="4638" y="3897" width="1154" height="551" rotated="true" frameX="0" frameY="-25" frameWidth="562" frameHeight="1179"/>
+</TextureAtlas>
