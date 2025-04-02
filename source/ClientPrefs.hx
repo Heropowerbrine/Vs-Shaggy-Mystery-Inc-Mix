@@ -161,6 +161,7 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.framerate != null) {
 			framerate = FlxG.save.data.framerate;
+			if (framerate > 120) framerate = 120;
 			if(framerate > FlxG.drawFramerate) {
 				FlxG.updateFramerate = framerate;
 				FlxG.drawFramerate = framerate;

@@ -3093,6 +3093,7 @@ class PlayState extends MusicBeatState
 						zephState = 2;
 						FlxG.sound.music.stop();
 						remove(zeph);
+						remove(foregroundGroup);
 						zeph = new FlxSprite().loadGraphic(Paths.image('MASK/possessed', 'shared'));
 						zeph.updateHitbox();
 						zeph.antialiasing = true;
@@ -4390,7 +4391,7 @@ class PlayState extends MusicBeatState
 						schoolIntro(0);
 					case 'zeph ending':
 						camFollow.x = dad.getMidpoint().x;
-						camFollow.y = dad.getMidpoint().y;
+						camFollow.y = dad.getMidpoint().y - 400;
 						textIndex = 'upd/zeph3';
 						afterAction = 'zeph bye';
 						schoolIntro(0);

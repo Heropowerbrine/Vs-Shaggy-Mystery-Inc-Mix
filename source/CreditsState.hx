@@ -35,7 +35,7 @@ class CreditsState extends MusicBeatState
 		['Boboa', 'mim/boboa', 'Menu BG, Brazilian-Portuguese Translations for Shaggy X Matt Dialogue', '', 0xFFFF9E00],
 		['Kivro', '', 'Blue Matt Sprites', '', 0xFFFF9E00],
 		['SamTheSly', 'mim/samthesly', 'Music (Where Are You)', '', 0xFFFF9E00],
-		['SicOn', 'mim/sicon', 'Music (Super Saiyan)', '', 0xFFFF9E00],
+		['SicOn', 'mim/sicon', 'Music (Eruption, Super Saiyan)', '', 0xFFFF9E00],
 		['ThatOneGuy', '', 'Music (Power Link)', '', 0xFFFF9E00],
 		['krayzoneX', '', 'Music (Power Link)', '', 0xFFFF9E00],
 		['Ahloof', 'mim/ahloof', 'Music (Soothing Power)', '', 0xFFFF9E00],
