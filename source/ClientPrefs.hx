@@ -8,6 +8,11 @@ import Controls;
 
 class ClientPrefs {
 	//TO DO: Redo ClientPrefs in a way that isn't too stupid
+	//I've come from the distant future, it is in fact no longer stupid -Hero
+	public static var screensaver:Bool = false;
+ 	public static var wideScreen:Bool = false;
+ 	public static var controlsAlpha:Float = 0.7;
+ 	public static var hideHitboxHints:Bool = true;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var showFPS:Bool = true;
