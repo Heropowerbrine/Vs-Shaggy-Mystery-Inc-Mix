@@ -49,6 +49,7 @@ import Achievements;
 import openfl.utils.Assets as OpenFlAssets;
 import flash.system.System;
 import StrumNote.SustainSplash;
+import hxvlc.flixel.FlxVideoSprite;
 
 using StringTools;
 
@@ -6233,13 +6234,15 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('exit'));
 					toDfS = 1;
 				case 720:
-					var video:MP4Handler = new MP4Handler();
+					var video = new FlxVideoSprite();
+					add(video);
+					video.load(Paths.video('zoinks'));
+					video.play();
 
-					video.playMP4(Paths.video('zoinks'));
-					video.finishCallback = function()
+					video.bitmap.onEndReached.add(function()
 					{
 						endSong();
-					}
+					});
 			}
 			if (cs_time > 220)
 			{
