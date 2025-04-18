@@ -327,6 +327,9 @@ class FreeplayState extends MusicBeatState
 			add(hb_big_border);
 		}
 
+		#if mobile
+		addVirtualPad(FULL, A_B_X_Y);
+		#end
 		super.create();
 	}
 
@@ -393,14 +396,14 @@ class FreeplayState extends MusicBeatState
 		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + (Math.floor(lerpRating * 10000) / 100) + '%)';
 		positionHighscore();
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
+		var upP = controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end;
+		var downP = controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end;
 		var accepted = false;
 		var space = false;
 
 		if (wiiMenuState == 0) {
-			accepted = controls.ACCEPT;
-			space = FlxG.keys.justPressed.SPACE;
+			accepted = controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end;
+			space = FlxG.keys.justPressed.SPACE #if mobile || _virtualpad.buttonY.justPressed #end;
 		}
 
 		if (wiiMenuState <= 0)
@@ -415,9 +418,9 @@ class FreeplayState extends MusicBeatState
 			}
 
 			
-			if (controls.UI_LEFT_P)
+			if (controls.UI_LEFT_P #if mobile || _virtualpad.buttonLeft.justPressed #end)
 				changeDiff(-1);
-			if (controls.UI_RIGHT_P)
+			if (controls.UI_RIGHT_P #if mobile || _virtualpad.buttonRight.justPressed #end)
 				changeDiff(1);
 		}
 
@@ -429,7 +432,7 @@ class FreeplayState extends MusicBeatState
 		rot ++;
 		hb_bg.alpha = hb_text_small.alpha;
 
-		if (controls.BACK)
+		if (controls.BACK #if mobile || _virtualpad.buttonB.justPressed #end)
 		{
 			if(colorTween != null) {
 				colorTween.cancel();
@@ -501,7 +504,7 @@ class FreeplayState extends MusicBeatState
 					
 			destroyFreeplayVocals();
 		}
-		else if(controls.RESET)
+		else if(controls.RESET #if mobile || _virtualpad.buttonX.justPressed #end)
 		{
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
