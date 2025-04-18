@@ -9,6 +9,7 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import lime.app.Application;
+import mobile.backend.MobileScaleMode;
 
 class Main extends Sprite
 {
@@ -59,6 +60,7 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
+		mobile.backend.CrashHandler.init();
 
 		if (stage != null)
 		{
@@ -82,6 +84,7 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
+		#if (openfl <= "9.2.0")
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
@@ -93,6 +96,10 @@ class Main extends Sprite
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
 		}
+		#else
+		if (zoom == -1.0)
+ 			zoom = 1.0;
+ 		#end
 
 		#if !debug
 		initialState = TitleState;
@@ -100,18 +107,18 @@ class Main extends Sprite
 
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
-		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
-		#end
 
 		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
+		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
+		FlxG.scaleMode = new MobileScaleMode();
 
 		
 	}
