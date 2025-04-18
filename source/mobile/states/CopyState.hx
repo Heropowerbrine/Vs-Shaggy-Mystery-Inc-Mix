@@ -26,6 +26,8 @@ package mobile.states;
 import TitleState;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
+import sys.FileSystem;
+import sys.io.File;
 import lime.utils.Assets as LimeAssets;
 import openfl.utils.Assets as OpenFLAssets;
 import openfl.utils.ByteArray;
