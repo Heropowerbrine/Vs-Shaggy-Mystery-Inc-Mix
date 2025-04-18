@@ -43,6 +43,9 @@ import lime.system.ThreadPool;
  * ...
  * @author: Karim Akra
  */
+
+using StringTools;
+
 class CopyState extends MusicBeatState
 {
 	private static final textFilesExtensions:Array<String> = ['ini', 'txt', 'xml', 'hxs', 'hx', 'lua', 'json', 'frag', 'vert'];
