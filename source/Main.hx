@@ -119,7 +119,7 @@ class Main extends Sprite
 		addChild(fpsVar);
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
-			fpsVar.positionFPS(10, 3, Math.min(w / FlxG.width, h / FlxG.height));
+			positionFPS(fpsVar, 10, 3, Math.min(w / FlxG.width, h / FlxG.height));
 		}
 
 		#if html5
@@ -127,15 +127,7 @@ class Main extends Sprite
 		FlxG.mouse.visible = false;
 		#end
 		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
-		FlxG.scaleMode = new MobileScaleMode();
-
-		public inline function positionFPS(X:Float, Y:Float, ?scale:Float = 1){
- 		scaleX = scaleY = #if mobile (scale > 1 ? scale : 1) #else (scale < 1 ? scale : 1) #end;
- 		x = FlxG.game.x + X;
- 		y = FlxG.game.y + Y;
-		}
-
-		
+		FlxG.scaleMode = new MobileScaleMode();		
 	}
 
 	static var didChange:Bool = false;
@@ -146,4 +138,10 @@ class Main extends Sprite
 		Application.current.window.setIcon(lime.graphics.Image.fromFile("assets/images/shaggyIcon.png"));
 		Application.current.window.title = "Friday Night Funkin' VS Shaggy Mystery Inc Mix";
 	}
+	public function positionFPS(fps:FPS, X:Float, Y:Float, ?scale:Float = 1):Void
+        {
+            fps.scaleX = fps.scaleY = #if mobile (scale > 1 ? scale : 1) #else (scale < 1 ? scale : 1) #end;
+            fps.x = FlxG.game.x + X;
+            fps.y = FlxG.game.y + Y;
+        }
 }
