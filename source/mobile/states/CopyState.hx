@@ -25,7 +25,10 @@ package mobile.states;
 #if mobile
 import TitleState;
 import flixel.FlxSprite;
+import flixel.FlxG;
 import flixel.text.FlxText;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import sys.FileSystem;
 import sys.io.File;
 import lime.utils.Assets as LimeAssets;
