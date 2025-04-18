@@ -3,6 +3,7 @@ package;
 import Conductor.BPMChangeEvent;
 import flixel.FlxG;
 import flixel.FlxSubState;
+import flixel.addons.transition.FlxTransitionableState;
 
 class MusicBeatSubstate extends FlxSubState
 {
@@ -17,6 +18,30 @@ class MusicBeatSubstate extends FlxSubState
 	private var curStep:Int = 0;
 	private var curBeat:Int = 0;
 	private var controls(get, never):Controls;
+
+	#if mobile
+ 	var _virtualpad:FlxVirtualPad;
+ 
+ 	public function addVirtualPad(?DPad:FlxDPadMode, ?Action:FlxActionMode) {
+ 		_virtualpad = new FlxVirtualPad(DPad, Action);
+ 		add(_virtualpad);
+ 	}
+ 
+     public function addVPadCam() {
+ 		var virtualpadcam = new flixel.FlxCamera();
+ 		virtualpadcam.bgColor.alpha = 0;
+ 		FlxG.cameras.add(virtualpadcam, false);
+ 		_virtualpad.cameras = [virtualpadcam];
+     }
+ 
+ 	public function removeVirtualPad() {
+ 		remove(_virtualpad);
+ 	}
+ 	public function closeSs() {
+ 		FlxTransitionableState.skipNextTransOut = true;
+ 		FlxG.resetState();
+ 	}
+ 	#end
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
