@@ -46,7 +46,7 @@
 	<assets path='alsoft.ini' />
 	
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
-	<define name="MODS_ALLOWED" if="desktop" />
+	<define name="MODS_ALLOWED" if="desktop || android" />
 	<!-- <define name="LUA_ALLOWED" if="windows" /> -->
 	<define name="ACHIEVEMENTS_ALLOWED" />
 	<set name="ACHIEVEMENTS_ALLOWED" value="0" />
