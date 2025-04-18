@@ -6249,10 +6249,9 @@ class PlayState extends MusicBeatState
 					add(video);
 					video.load(Paths.video('zoinks'));
 					video.play();
-
-                                        video.bitmap.height = FlxG.stage.stageHeight;
-                                        trace("Height: " + FlxG.stage.stageHeight);
-					trace("Bitmap before size - W: " + video.bitmap.width + ", H: " + video.bitmap.height);
+					video.bitmap.setGraphicSize(FlxG.width, FlxG.height);
+					video.bitmap.updateHitbox();
+					video.bitmap.screenCenter();
 
 					video.bitmap.onEndReached.add(function()
 					{
