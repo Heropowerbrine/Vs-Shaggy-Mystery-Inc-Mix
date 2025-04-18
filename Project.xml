@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Wii Funkin': VS Matt" file="Wii Funkin V4" packageName="com.ninjamuffin99.funkin" package="com.ninjamuffin99.funkin" main="Main" version="0.2.7" company="ninjamuffin99" />
+	<app title="Wii Funkin': VS Matt" file="Wii Funkin V4" packageName="com.ninjamuffin99.vsshaggyaprilfools" package="com.ninjamuffin99.vsshaggyaprilfools" main="Main" version="0.2.7" company="ninjamuffin99" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -27,7 +27,7 @@
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
+	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -141,6 +141,18 @@
 
 	<!--Enable this for Nape release builds for a serious peformance improvement-->
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
+
+	<!-- make's game use less ram -->
+        <haxedef name="HXCPP_GC_BIG_BLOCKS"/>
+
+	<haxedef name="HXCPP_CHECK_POINTER" />
+	<haxedef name="HXCPP_STACK_LINE" />
+	<haxedef name="HXCPP_STACK_TRACE" />
+	<haxedef name="HXCPP_CATCH_SEGV" />
+
+	<!--Avoid memory leaks with for loops in HScript-->
+  	<haxedef name="loop_unroll_max_cost" value="25" />
+  	<haxedef name="DISABLED_MACRO_SUPERLATIVE" if="mobile" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
