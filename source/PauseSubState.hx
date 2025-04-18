@@ -199,6 +199,11 @@ class PauseSubState extends MusicBeatSubstate
 		changeSelection();
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
+		#if mobile
+		addVirtualPad(UP_DOWN, A);
+		addVPadCam();
+		#end
 	}
 
 	override function update(elapsed:Float)
@@ -208,9 +213,9 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
-		var accepted = controls.ACCEPT;
+		var upP = controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end;
+		var downP = controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end;
+		var accepted = controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end;
 
 		if (upP)
 		{
