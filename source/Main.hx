@@ -10,6 +10,8 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import lime.app.Application;
 import mobile.backend.MobileScaleMode;
+import mobile.backend.SUtil;
+import mobile.backend.CopyState;
 
 class Main extends Sprite
 {
