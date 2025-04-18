@@ -8,11 +8,12 @@ import lime.utils.AssetManifest;
 #if sys
 import sys.io.File;
 #end
+
+using StringTools;
+
 #if cpp
 @:cppFileCode('#include <thread>')
 #end
-
-using StringTools;
 
 class CoolUtil
 {
