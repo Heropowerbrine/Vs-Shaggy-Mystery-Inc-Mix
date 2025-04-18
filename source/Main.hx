@@ -119,6 +119,7 @@ class Main extends Sprite
 		addChild(fpsVar);
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
+			fpsVar.positionFPS(10, 3, Math.min(w / FlxG.width, h / FlxG.height));
 		}
 
 		#if html5
@@ -127,6 +128,12 @@ class Main extends Sprite
 		#end
 		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
 		FlxG.scaleMode = new MobileScaleMode();
+
+		public inline function positionFPS(X:Float, Y:Float, ?scale:Float = 1){
+ 		scaleX = scaleY = #if mobile (scale > 1 ? scale : 1) #else (scale < 1 ? scale : 1) #end;
+ 		x = FlxG.game.x + X;
+ 		y = FlxG.game.y + Y;
+		}
 
 		
 	}
