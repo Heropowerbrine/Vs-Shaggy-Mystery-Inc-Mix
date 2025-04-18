@@ -6246,11 +6246,10 @@ class PlayState extends MusicBeatState
 					toDfS = 1;
 				case 720:
 					var video = new FlxVideoSprite();
+					video.cameras = [camOther];
 					add(video);
 					video.load(Paths.video('zoinks'));
 					video.play();
-					video.bitmap.height = FlxG.height;
-					video.bitmap.width = FlxG.height * (16 / 9);
 
 					video.bitmap.onEndReached.add(function()
 					{
