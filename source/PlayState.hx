@@ -1826,7 +1826,18 @@ class PlayState extends MusicBeatState
 					{
 						skip = true;
 					}
-					if (FlxG.keys.justReleased.ANY || skip)
+		                        var justTouched:Bool = false;
+
+		                        for (touch in FlxG.touches.list)
+		                        {
+			                    justTouched = false;
+
+			                    if (touch.justPressed){
+				                    justTouched = true;
+			                    }
+		                        }
+
+					if (FlxG.keys.justReleased.ANY || skip || justTouched)
 					{
 						if ((curr_char <= dialogue[curr_dial].length) && !skip)
 						{
@@ -6241,6 +6252,10 @@ class PlayState extends MusicBeatState
 
 					video.bitmap.height = FlxG.stage.stageHeight;
 					video.bitmap.width = FlxG.stage.stageHeight * (16 / 9);
+
+					// Centers it cos it disappears for some reason
+					video.bitmap.x = (FlxG.stage.stageWidth - video.bitmap.width) / 2;
+                                        video.bitmap.y = (FlxG.stage.stageHeight - video.bitmap.height) / 2;
 
 					video.bitmap.onEndReached.add(function()
 					{
