@@ -22,6 +22,9 @@
 
 package mobile.backend;
 
+import sys.FileSystem;
+import sys.io.File;
+
 /**
  * A storage class for mobile.
  * @author Karim Akra and Homura Akemi (HomuHomu833)
