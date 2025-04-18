@@ -119,7 +119,6 @@ class Main extends Sprite
 		addChild(fpsVar);
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
-			positionFPS(fpsVar, 10, 3, Math.min(w / FlxG.width, h / FlxG.height));
 		}
 
 		#if html5
@@ -127,7 +126,12 @@ class Main extends Sprite
 		FlxG.mouse.visible = false;
 		#end
 		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
-		FlxG.scaleMode = new MobileScaleMode();		
+		FlxG.scaleMode = new MobileScaleMode();	
+
+		FlxG.signals.gameResized.add(function (w, h) {
+		     if(fpsVar != null)
+ 		           positionFPS(fpsVar, 10, 3, Math.min(w / FlxG.width, h / FlxG.height)); 
+		});
 	}
 
 	static var didChange:Bool = false;
