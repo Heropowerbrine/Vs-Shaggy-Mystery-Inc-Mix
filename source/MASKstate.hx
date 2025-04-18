@@ -229,6 +229,10 @@ class MASKstate extends MusicBeatState
 			optList[i] = readOpt[i].split(":");
 		}
 
+		#if mobile
+		addVirtualPad(UP_DOWN, A);
+		#end
+
 		super.create();
 	}
 
@@ -405,7 +409,7 @@ class MASKstate extends MusicBeatState
 					musicInit();
 				}
 
-				if (controls.ACCEPT)
+				if (controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end)
 				{
 					var o = optSelect + 1;
 					var optShown = FlxG.save.data.p_progress[o];
@@ -428,7 +432,7 @@ class MASKstate extends MusicBeatState
 					}
 				}
 			case 4: //Prompt menu
-				if (controls.ACCEPT)
+				if (controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end)
 				{
 					loadData(afterData[optSelect + 2]);
 					textSetup();
@@ -494,9 +498,9 @@ class MASKstate extends MusicBeatState
 				bfCursor.y = optsText.y + optSelect * 44;
 
 				var oMov = 0;
-				if (controls.UI_DOWN_P)
+				if (controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end)
 					oMov = 1;
-				else if (controls.UI_UP_P)
+				else if (controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end)
 					oMov = -1;
 				
 				if (oMov != 0)
@@ -841,16 +845,18 @@ class MASKstate extends MusicBeatState
 		lChar = intChar;
 
 		//Press start to pair bluetooth device is ready to peir
-		if (FlxG.keys.justPressed.ANY)
-		{
-			if (intChar == read.length - 1)
-			{
-				textNext();
-			}
-			else
-			{
-				charInd = read.length - 1;
-			}
+		for (touch in FlxG.touches.list) {
+ 		    if (touch.justPressed)
+ 		    {
+ 			    if (intChar == read.length - 1)
+ 			    {
+ 				    textNext();
+ 			    }
+ 			    else
+ 			    {
+ 				    charInd = read.length - 1;
+ 			    }
+		    }
 		}
 		#if debug
 		if (FlxG.keys.justPressed.ONE)
