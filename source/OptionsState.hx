@@ -777,7 +777,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide Song Length',
 		'Flashing Lights',
 		'Camera Zooms',
-		'FPS Counter'
+		'FPS Counter',
+		'Hide Hitbox Hints'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -910,6 +911,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		if(usesCheckbox) {
 			if(controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end && nextAccept <= 0) {
 				switch(options[curSelected]) {
+				        case 'Hide Hitbox Hints':
+				                ClientPrefs.hideHitboxHints = !ClientPrefs.hideHitboxHints
 					case 'FPS Counter':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
 						if(Main.fpsVar != null)
@@ -1026,6 +1029,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 		var daText:String = '';
 		switch(options[curSelected]) {
+			case 'Hide Hitbox Hints':
+				daText = "Hides the extra hitbox hints";
 			case 'Framerate':
 				daText = "ONLY lower this from 120 if your pc\nis having severe issues loading stuff.";
 			case 'Note Delay':
@@ -1113,6 +1118,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 			if(checkbox != null) {
 				var daValue:Bool = false;
 				switch(options[checkboxNumber[i]]) {
+					case 'Hide Hitbox Hints':
+						daValue = ClientPrefs.hideHitboxHints;
 					case 'FPS Counter':
 						daValue = ClientPrefs.showFPS;
 					case 'Low Quality':
