@@ -1366,7 +1366,15 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		addHitbox(3);
+		if mania == 0 {
+			addHitbox(3);
+		} else if mania == 1 {
+			addHitbox(5);
+		} else if mania == 2 {
+			addHitbox(6);
+		} else {
+			addHitbox(8);
+		}
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
