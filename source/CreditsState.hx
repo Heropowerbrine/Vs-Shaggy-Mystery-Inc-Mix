@@ -25,7 +25,7 @@ class CreditsState extends MusicBeatState
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Android Port'],
-		['Heropowerbrine', 'Hero', 'Ported this mod to Android(and a bunch of other mods too)', 'https://www.youtube.com/c/Heropowerbrine', '0xFF007619'],
+		['Heropowerbrine', 'Hero', 'Ported this mod to Android(and a bunch of other mods too)', 'https://www.youtube.com/c/Heropowerbrine', 0xFF007619],
 		['Mystery Inc Mix'],
 		['Rareblin', 'mim/rareblin', 'Mod Idea, Music (God Eater, Final Destination, Talladega, Pre-Talladega Dialogue music)', '', 0xFFFF9E00],
 		['TheOnlyVolume', '', 'Music (Main Menu, Zeph Theme, Kaio Ken, Blast, Revenge, Astral Calamity, Talladega)', '', 0xFFFF9E00],
