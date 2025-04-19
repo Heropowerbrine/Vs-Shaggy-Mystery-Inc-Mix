@@ -912,7 +912,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			if(controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end && nextAccept <= 0) {
 				switch(options[curSelected]) {
 				        case 'Hide Hitbox Hints':
-				                ClientPrefs.hideHitboxHints = !ClientPrefs.hideHitboxHints
+				                ClientPrefs.hideHitboxHints = !ClientPrefs.hideHitboxHints;
 					case 'FPS Counter':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
 						if(Main.fpsVar != null)
