@@ -95,7 +95,11 @@ class ResetScoreSubState extends MusicBeatSubstate
 		}
 		if(controls.BACK #if mobile || _virtualpad.buttonB.justPressed #end) {
 			FlxG.sound.play(Paths.sound('cancelMenu'), 1);
+			#if mobile
+			closeSs();
+			#else
 			close();
+			#end
 		} else if(controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end) {
 			if(onYes) {
 				if(week == -1) {
