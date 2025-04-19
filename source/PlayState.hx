@@ -2736,9 +2736,9 @@ class PlayState extends MusicBeatState
 
 		if (bgEdit)
 		{
-			if (FlxG.keys.justPressed.UP || getJustPressed(2) || getJustPressed(7))
+			if (FlxG.keys.justPressed.UP)
 				bgTarget ++;
-			if (FlxG.keys.justPressed.DOWN || getJustPressed(1) || getJustPressed(6))
+			if (FlxG.keys.justPressed.DOWN)
 				bgTarget --;
 		}
 		/*if (FlxG.keys.justPressed.NINE)
@@ -2952,11 +2952,11 @@ class PlayState extends MusicBeatState
 						rock.alpha = 1;
 						if (true)//(!PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
 						{
-							if (FlxG.keys.pressed.UP && bfControlY > 0)
+							if (FlxG.keys.pressed.UP || getPressed(2) || getPressed(7) && bfControlY > 0)
 							{
 								bfControlY --;
 							}
-							if (FlxG.keys.pressed.DOWN && bfControlY < 2290)
+							if (FlxG.keys.pressed.DOWN || getPressed(1) || getPressed(6) && bfControlY < 2290)
 							{
 								trace(bfControlY);
 								bfControlY ++;
