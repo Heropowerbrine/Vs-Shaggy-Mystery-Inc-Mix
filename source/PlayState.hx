@@ -4667,40 +4667,40 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void
 	{
 		// HOLDING
-		var up = _hitbox.K3.pressed || controls.NOTE_UP;
-		var right = _hitbox.K4.pressed || controls.NOTE_RIGHT;
-		var down = _hitbox.K2.pressed || controls.NOTE_DOWN;
-		var left = _hitbox.K1.pressed || controls.NOTE_LEFT;
+		var up = _hitbox.array[2].pressed || controls.NOTE_UP;
+		var right = _hitbox.array[3].pressed || controls.NOTE_RIGHT;
+		var down = _hitbox.array[1].pressed || controls.NOTE_DOWN;
+		var left = _hitbox.array[0].pressed || controls.NOTE_LEFT;
 
-		var K1 = _hitbox.K1.pressed || controls.A1 || controls.B1;
-		var K2 = _hitbox.K2.pressed || controls.A2 || controls.B2;
-		var K3 = _hitbox.K3.pressed || controls.A3 || controls.B3;
-		var K4 = _hitbox.K4.pressed || controls.A4 || controls.B4;
-		var K5 = _hitbox.K5.pressed || controls.A5 || controls.B5;
-		var K6 = _hitbox.K6.pressed || controls.A6 || controls.B6;
-		var K7 = _hitbox.K7.pressed || controls.A7 || controls.B7;
-		var K8 = _hitbox.K8.pressed || controls.B8;
-		var K9 = _hitbox.K9.pressed || controls.B9;
+		var K1 = _hitbox.array[0].pressed || controls.A1 || controls.B1;
+		var K2 = _hitbox.array[1].pressed || controls.A2 || controls.B2;
+		var K3 = _hitbox.array[2].pressed || controls.A3 || controls.B3;
+		var K4 = _hitbox.array[3].pressed || controls.A4 || controls.B4;
+		var K5 = _hitbox.array[4].pressed || controls.A5 || controls.B5;
+		var K6 = _hitbox.array[5].pressed || controls.A6 || controls.B6;
+		var K7 = _hitbox.array[6].pressed || controls.A7 || controls.B7;
+		var K8 = _hitbox.array[7].pressed || controls.B8;
+		var K9 = _hitbox.array[8].pressed || controls.B9;
 
-		var K1P = _hitbox.K1.justPressed || controls.A1_P || controls.B1_P;
-		var K2P = _hitbox.K2.justPressed || controls.A2_P || controls.B2_P;
-		var K3P = _hitbox.K3.justPressed || controls.A3_P || controls.B3_P;
-		var K4P = _hitbox.K4.justPressed || controls.A4_P || controls.B4_P;
-		var K5P = _hitbox.K5.justPressed || controls.A5_P || controls.B5_P;
-		var K6P = _hitbox.K6.justPressed || controls.A6_P || controls.B6_P;
-		var K7P = _hitbox.K7.justPressed || controls.A7_P || controls.B7_P;
-		var K8P = _hitbox.K8.justPressed || controls.B8_P;
-		var K9P = _hitbox.K9.justPressed || controls.B9_P;
+		var K1P = _hitbox.array[0].justPressed || controls.A1_P || controls.B1_P;
+		var K2P = _hitbox.array[1].justPressed || controls.A2_P || controls.B2_P;
+		var K3P = _hitbox.array[2].justPressed || controls.A3_P || controls.B3_P;
+		var K4P = _hitbox.array[3].justPressed || controls.A4_P || controls.B4_P;
+		var K5P = _hitbox.array[4].justPressed || controls.A5_P || controls.B5_P;
+		var K6P = _hitbox.array[5].justPressed || controls.A6_P || controls.B6_P;
+		var K7P = _hitbox.array[6].justPressed || controls.A7_P || controls.B7_P;
+		var K8P = _hitbox.array[7].justPressed || controls.B8_P;
+		var K9P = _hitbox.array[8].justPressed || controls.B9_P;
 
-		var K1R = _hitbox.K1.justReleased || controls.A1_R || controls.B1_R;
-		var K2R = _hitbox.K2.justReleased || controls.A2_R || controls.B2_R;
-		var K3R = _hitbox.K3.justReleased || controls.A3_R || controls.B3_R;
-		var K4R = _hitbox.K4.justReleased || controls.A4_R || controls.B4_R;
-		var K5R = _hitbox.K5.justReleased || controls.A5_R || controls.B5_R;
-		var K6R = _hitbox.K6.justReleased || controls.A6_R || controls.B6_R;
-		var K7R = _hitbox.K7.justReleased || controls.A7_R || controls.B7_R;
-		var K8R = _hitbox.K8.justReleased || controls.B8_R;
-		var K9R = _hitbox.K9.justReleased || controls.B9_R;
+		var K1R = _hitbox.array[0].justReleased || controls.A1_R || controls.B1_R;
+		var K2R = _hitbox.array[1].justReleased || controls.A2_R || controls.B2_R;
+		var K3R = _hitbox.array[2].justReleased || controls.A3_R || controls.B3_R;
+		var K4R = _hitbox.array[3].justReleased || controls.A4_R || controls.B4_R;
+		var K5R = _hitbox.array[4].justReleased || controls.A5_R || controls.B5_R;
+		var K6R = _hitbox.array[5].justReleased || controls.A6_R || controls.B6_R;
+		var K7R = _hitbox.array[6].justReleased || controls.A7_R || controls.B7_R;
+		var K8R = _hitbox.array[7].justReleased || controls.B8_R;
+		var K9R = _hitbox.array[8].justReleased || controls.B9_R;
 
 		var sH = [
 			K1,
@@ -4797,15 +4797,15 @@ class PlayState extends MusicBeatState
 			K9R
 		];
 
-		var upP = _hitbox.K3.justPressed || controls.NOTE_UP_P;
-		var rightP = _hitbox.K4.justPressed || controls.NOTE_RIGHT_P;
-		var downP = _hitbox.K2.justPressed || controls.NOTE_DOWN_P;
-		var leftP = _hitbox.K1.justPressed || controls.NOTE_LEFT_P;
+		var upP = _hitbox.array[2].justPressed || controls.NOTE_UP_P;
+		var rightP = _hitbox.array[3].justPressed || controls.NOTE_RIGHT_P;
+		var downP = _hitbox.array[1].justPressed || controls.NOTE_DOWN_P;
+		var leftP = _hitbox.array[0].justPressed || controls.NOTE_LEFT_P;
 
-		var upR = _hitbox.K3.justReleased || controls.NOTE_UP_R;
-		var rightR = _hitbox.K4.justReleased || controls.NOTE_RIGHT_R;
-		var downR = _hitbox.K2.justReleased || controls.NOTE_DOWN_R;
-		var leftR = _hitbox.K1.justReleased || controls.NOTE_LEFT_R;
+		var upR = _hitbox.array[2].justReleased || controls.NOTE_UP_R;
+		var rightR = _hitbox.array[3].justReleased || controls.NOTE_RIGHT_R;
+		var downR = _hitbox.array[1].justReleased || controls.NOTE_DOWN_R;
+		var leftR = _hitbox.array[0].justReleased || controls.NOTE_LEFT_R;
 
 		var controlArray:Array<Bool> = [leftP, downP, upP, rightP];
 		var controlReleaseArray:Array<Bool> = [leftR, downR, upR, rightR];
