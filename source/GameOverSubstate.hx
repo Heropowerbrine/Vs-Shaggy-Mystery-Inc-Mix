@@ -66,12 +66,13 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		camFollowPos.setPosition(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2));
 		add(camFollowPos);
-		if (godModeShit)
-			endBullshit();
 		#if mobile
 		addVirtualPad(NONE, A_B);
 		addVPadCam();
 		#end
+		if (godModeShit)
+			_virtualpad.visible = false;
+			endBullshit();
 	}
 
 	override function update(elapsed:Float)
