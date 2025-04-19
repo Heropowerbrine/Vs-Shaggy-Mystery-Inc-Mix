@@ -1366,6 +1366,8 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
+		addHitbox(3);
+
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -2038,6 +2040,8 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+		_hitbox.visible = true;
+		
 		if(startedCountdown) {
 			return;
 		}
@@ -4252,6 +4256,7 @@ class PlayState extends MusicBeatState
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
+		_hitbox.visible = false;
 
 		deathCounter = 0;
 		seenCutscene = false;
@@ -4662,115 +4667,145 @@ class PlayState extends MusicBeatState
 	private function keyShit():Void
 	{
 		// HOLDING
-		var up = controls.NOTE_UP;
-		var right = controls.NOTE_RIGHT;
-		var down = controls.NOTE_DOWN;
-		var left = controls.NOTE_LEFT;
+		var up = _hitbox.K3.pressed || controls.NOTE_UP;
+		var right = _hitbox.K4.pressed || controls.NOTE_RIGHT;
+		var down = _hitbox.K2.pressed || controls.NOTE_DOWN;
+		var left = _hitbox.K1.pressed || controls.NOTE_LEFT;
+
+		var K1 = _hitbox.K1.pressed || controls.A1 || controls.B1;
+		var K2 = _hitbox.K2.pressed || controls.A2 || controls.B2;
+		var K3 = _hitbox.K3.pressed || controls.A3 || controls.B3;
+		var K4 = _hitbox.K4.pressed || controls.A4 || controls.B4;
+		var K5 = _hitbox.K5.pressed || controls.A5 || controls.B5;
+		var K6 = _hitbox.K6.pressed || controls.A6 || controls.B6;
+		var K7 = _hitbox.K7.pressed || controls.A7 || controls.B7;
+		var K8 = _hitbox.K8.pressed || controls.B8;
+		var K9 = _hitbox.K9.pressed || controls.B9;
+
+		var K1P = _hitbox.K1.justPressed || controls.A1_P || controls.B1_P;
+		var K2P = _hitbox.K2.justPressed || controls.A2_P || controls.B2_P;
+		var K3P = _hitbox.K3.justPressed || controls.A3_P || controls.B3_P;
+		var K4P = _hitbox.K4.justPressed || controls.A4_P || controls.B4_P;
+		var K5P = _hitbox.K5.justPressed || controls.A5_P || controls.B5_P;
+		var K6P = _hitbox.K6.justPressed || controls.A6_P || controls.B6_P;
+		var K7P = _hitbox.K7.justPressed || controls.A7_P || controls.B7_P;
+		var K8P = _hitbox.K8.justPressed || controls.B8_P;
+		var K9P = _hitbox.K9.justPressed || controls.B9_P;
+
+		var K1R = _hitbox.K1.justReleased || controls.A1_R || controls.B1_R;
+		var K2R = _hitbox.K2.justReleased || controls.A2_R || controls.B2_R;
+		var K3R = _hitbox.K3.justReleased || controls.A3_R || controls.B3_R;
+		var K4R = _hitbox.K4.justReleased || controls.A4_R || controls.B4_R;
+		var K5R = _hitbox.K5.justReleased || controls.A5_R || controls.B5_R;
+		var K6R = _hitbox.K6.justReleased || controls.A6_R || controls.B6_R;
+		var K7R = _hitbox.K7.justReleased || controls.A7_R || controls.B7_R;
+		var K8R = _hitbox.K8.justReleased || controls.B8_R;
+		var K9R = _hitbox.K9.justReleased || controls.B9_R;
 
 		var sH = [
-			controls.A1,
-			controls.A2,
-			controls.A3,
-			controls.A5,
-			controls.A6,
-			controls.A7
+			K1,
+			K2,
+			K3,
+			K4,
+			K5,
+			K6
 		];
 
 		var vH = [
-			controls.A1,
-			controls.A2,
-			controls.A3,
-			controls.A4,
-			controls.A5,
-			controls.A6,
-			controls.A7
+			K1,
+			K2,
+			K3,
+			K4,
+			K5,
+			K6,
+			K7
 		];
 
 		var nH = [
-			controls.B1,
-			controls.B2,
-			controls.B3,
-			controls.B4,
-			controls.B5,
-			controls.B6,
-			controls.B7,
-			controls.B8,
-			controls.B9
+			K1,
+			K2,
+			K3,
+			K4,
+			K5,
+			K6,
+			K7,
+			K8,
+			K9
 		];
 
 
 		var sP = [
-			controls.A1_P,
-			controls.A2_P,
-			controls.A3_P,
-			controls.A5_P,
-			controls.A6_P,
-			controls.A7_P
+			K1P,
+			K2P,
+			K3P,
+			K4P,
+			K5P,
+			K6P
 		];
 
 		var vP = [
-			controls.A1_P,
-			controls.A2_P,
-			controls.A3_P,
-			controls.A4_P,
-			controls.A5_P,
-			controls.A6_P,
-			controls.A7_P
+			K1P,
+			K2P,
+			K3P,
+			K4P,
+			K5P,
+			K6P,
+			K7P
 		];
 
 		var nP = [
-			controls.B1_P,
-			controls.B2_P,
-			controls.B3_P,
-			controls.B4_P,
-			controls.B5_P,
-			controls.B6_P,
-			controls.B7_P,
-			controls.B8_P,
-			controls.B9_P
+			K1P,
+			K2P,
+			K3P,
+			K4P,
+			K5P,
+			K6P,
+			K7P,
+			K8P,
+			K9P
 		];
 
 
 		var sR = [
-			controls.A1_R,
-			controls.A2_R,
-			controls.A3_R,
-			controls.A5_R,
-			controls.A6_R,
-			controls.A7_R
+			K1R,
+			K2R,
+			K3R,
+			K4R,
+			K5R,
+			K6R
 		];
 
 		var vR = [
-			controls.A1_R,
-			controls.A2_R,
-			controls.A3_R,
-			controls.A4_R,
-			controls.A5_R,
-			controls.A6_R,
-			controls.A7_R
+			K1R,
+			K2R,
+			K3R,
+			K4R,
+			K5R,
+			K6R,
+			K7R
 		];
 
 		var nR = [
-			controls.B1_R,
-			controls.B2_R,
-			controls.B3_R,
-			controls.B4_R,
-			controls.B5_R,
-			controls.B6_R,
-			controls.B7_R,
-			controls.B8_R,
-			controls.B9_R
+			K1R,
+			K2R,
+			K3R,
+			K4R,
+			K5R,
+			K6R,
+			K7R,
+			K8R,
+			K9R
 		];
 
-		var upP = controls.NOTE_UP_P;
-		var rightP = controls.NOTE_RIGHT_P;
-		var downP = controls.NOTE_DOWN_P;
-		var leftP = controls.NOTE_LEFT_P;
+		var upP = _hitbox.K3.justPressed || controls.NOTE_UP_P;
+		var rightP = _hitbox.K4.justPressed || controls.NOTE_RIGHT_P;
+		var downP = _hitbox.K2.justPressed || controls.NOTE_DOWN_P;
+		var leftP = _hitbox.K1.justPressed || controls.NOTE_LEFT_P;
 
-		var upR = controls.NOTE_UP_R;
-		var rightR = controls.NOTE_RIGHT_R;
-		var downR = controls.NOTE_DOWN_R;
-		var leftR = controls.NOTE_LEFT_R;
+		var upR = _hitbox.K3.justReleased || controls.NOTE_UP_R;
+		var rightR = _hitbox.K4.justReleased || controls.NOTE_RIGHT_R;
+		var downR = _hitbox.K2.justReleased || controls.NOTE_DOWN_R;
+		var leftR = _hitbox.K1.justReleased || controls.NOTE_LEFT_R;
 
 		var controlArray:Array<Bool> = [leftP, downP, upP, rightP];
 		var controlReleaseArray:Array<Bool> = [leftR, downR, upR, rightR];
