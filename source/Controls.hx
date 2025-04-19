@@ -737,9 +737,9 @@ class Controls extends FlxActionSet
  		//action.addInput(button, state);
 	}
 
-	public function setHitBox(hitbox:FlxHitbox, ?Type:type) {
-		if (Type == null)
-			Type = DEFAULT;
+	public function setHitBox(hitbox:FlxHitbox, ?type:Int) {
+		if (type == null)
+			type = 3;
 	
 		switch(Type){					
 		case 5:
@@ -767,7 +767,7 @@ class Controls extends FlxActionSet
 			inline forEachBound(Control.B7, (action, state) -> addbutton(action, hitbox.K7, state));
 			inline forEachBound(Control.B8, (action, state) -> addbutton(action, hitbox.K8, state));
 			inline forEachBound(Control.B9, (action, state) -> addbutton(action, hitbox.K9, state));											
-		case DEFAULT:	
+		case 3:	
 			inline forEachBound(Control.NOTE_UP, (action, state) -> addbutton(action, hitbox.K3, state));
 			inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbutton(action, hitbox.K2, state));
 			inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.K1, state));
