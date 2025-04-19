@@ -737,6 +737,65 @@ class Controls extends FlxActionSet
  		//action.addInput(button, state);
 	}
 
+	public function setHitBox(hitbox:FlxHitbox, ?Type:type) 
+	{
+	if (Type == null)
+		Type = DEFAULT;
+
+	switch(Type){					
+	case 5:
+		inline forEachBound(Control.A1, (action, state) -> addbutton(action, hitbox.K1, state));
+		inline forEachBound(Control.A2, (action, state) -> addbutton(action, hitbox.K2, state));
+		inline forEachBound(Control.A3, (action, state) -> addbutton(action, hitbox.K3, state));
+		inline forEachBound(Control.A4, (action, state) -> addbutton(action, hitbox.K4, state));
+		inline forEachBound(Control.A5, (action, state) -> addbutton(action, hitbox.K5, state));
+		inline forEachBound(Control.A6, (action, state) -> addbutton(action, hitbox.K6, state));									
+	case 6:	
+		inline forEachBound(Control.A1, (action, state) -> addbutton(action, hitbox.K1, state));
+		inline forEachBound(Control.A2, (action, state) -> addbutton(action, hitbox.K2, state));
+		inline forEachBound(Control.A3, (action, state) -> addbutton(action, hitbox.K3, state));
+		inline forEachBound(Control.A4, (action, state) -> addbutton(action, hitbox.K4, state));
+		inline forEachBound(Control.A5, (action, state) -> addbutton(action, hitbox.K5, state));
+		inline forEachBound(Control.A6, (action, state) -> addbutton(action, hitbox.K6, state));
+		inline forEachBound(Control.A7, (action, state) -> addbutton(action, hitbox.K7, state));					
+	case 8:
+		inline forEachBound(Control.B1, (action, state) -> addbutton(action, hitbox.K1, state));
+		inline forEachBound(Control.B2, (action, state) -> addbutton(action, hitbox.K2, state));
+		inline forEachBound(Control.B3, (action, state) -> addbutton(action, hitbox.K3, state));
+		inline forEachBound(Control.B4, (action, state) -> addbutton(action, hitbox.K4, state));
+		inline forEachBound(Control.B5, (action, state) -> addbutton(action, hitbox.K5, state));
+		inline forEachBound(Control.B6, (action, state) -> addbutton(action, hitbox.K6, state));
+		inline forEachBound(Control.B7, (action, state) -> addbutton(action, hitbox.K7, state));
+		inline forEachBound(Control.B8, (action, state) -> addbutton(action, hitbox.K8, state));
+		inline forEachBound(Control.B9, (action, state) -> addbutton(action, hitbox.K9, state));											
+	case DEFAULT:	
+		inline forEachBound(Control.NOTE_UP, (action, state) -> addbutton(action, hitbox.K3, state));
+		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbutton(action, hitbox.K2, state));
+		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.K1, state));
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbutton(action, hitbox.K4, state));	
+	}
+	}
+
+	public function removeFlxInput(Tinputs) {
+		for (action in this.digitalActions)
+		{
+			var i = action.inputs.length;
+
+			while (i-- > 0)
+			{
+				var input = action.inputs[i];
+				/*if (input.device == IFLXINPUT_OBJECT)
+					action.remove(input);*/
+
+				var x = Tinputs.length;
+				while (x-- > 0)
+					//if (Tinputs[x] == input)
+						action.remove(input);
+			}
+		}
+	}
+			
+
 	override function update()
 	{
 		super.update();
