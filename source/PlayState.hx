@@ -1375,6 +1375,7 @@ class PlayState extends MusicBeatState
 		} else {
 			addHitbox(3);
 		}
+		_hitbox.visible = false;
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
