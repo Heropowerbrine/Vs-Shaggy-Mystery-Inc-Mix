@@ -1366,11 +1366,11 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		if SONG.mania == 0 {
+		if (SONG.mania == 0) {
 			addHitbox(3);
-		} else if SONG.mania == 1 {
+		} else if (SONG.mania == 1) {
 			addHitbox(5);
-		} else if SONG.mania == 2 {
+		} else if (SONG.mania == 2) {
 			addHitbox(6);
 		} else {
 			addHitbox(8);
