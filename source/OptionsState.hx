@@ -141,6 +141,7 @@ class OptionsState extends MusicBeatState
 			resetScreen.alpha = 0;
 		}
 		if (controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end) {
+		        _virtualpad.visible = false;
 			if (curSelected != 0 && curSelected != 3)
 			{
 				for (item in grpOptions.members)
