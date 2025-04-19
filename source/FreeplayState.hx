@@ -725,12 +725,12 @@ class FreeplayState extends MusicBeatState
 				}
 				else
 				{
-					if (FlxG.keys.justPressed.Y)
+					if (FlxG.keys.justPressed.Y #if mobile || _virtualpad.buttonA.justPressed #end)
 					{
 						cmd_text.text = '';
 						cmd_wait = 1;
 					}
-					else if (FlxG.keys.justPressed.N)
+					else if (FlxG.keys.justPressed.N #if mobile || _virtualpad.buttonB.justPressed #end)
 					{
 						cmd_text.text = 'Installation has been cancelled.';
 						cmd_wait = 200;
