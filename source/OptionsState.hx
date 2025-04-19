@@ -83,6 +83,9 @@ class OptionsState extends MusicBeatState
 		resetScreen.alpha = 0;
 		add(resetScreen);
 
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 		super.create();
 	}
 
@@ -107,14 +110,14 @@ class OptionsState extends MusicBeatState
 		resetText.alpha = 0;
 		if (curSelected == 3) resetText.alpha = 1;
 
-		if (controls.UI_UP_P) {
+		if (controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end) {
 			changeSelection(-1);
 		}
-		if (controls.UI_DOWN_P) {
+		if (controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end) {
 			changeSelection(1);
 		}
 
-		if (controls.BACK) {
+		if (controls.BACK #if mobile || _virtualpad.buttonB.justPressed #end) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
 		}
@@ -137,7 +140,7 @@ class OptionsState extends MusicBeatState
 		{
 			resetScreen.alpha = 0;
 		}
-		if (controls.ACCEPT) {
+		if (controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end) {
 			if (curSelected != 0 && curSelected != 3)
 			{
 				for (item in grpOptions.members)
@@ -535,23 +538,26 @@ class ControlsSubstate extends MusicBeatSubstate {
 			}
 		}
 		changeSelection();
+		#if mobile
+		addVirtualPad(FULL,A_B);
+		#end
 	}
 
 	var leaving:Bool = false;
 	var bindingTime:Float = 0;
 	override function update(elapsed:Float) {
 		if(rebindingKey < 0) {
-			if (controls.UI_UP_P) {
+			if (controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end) {
 				changeSelection(-1);
 			}
-			if (controls.UI_DOWN_P) {
+			if (controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end) {
 				changeSelection(1);
 			}
-			if (controls.UI_LEFT_P || controls.UI_RIGHT_P) {
+			if (controls.UI_LEFT_P || controls.UI_RIGHT_P #if mobile || _virtualpad.buttonLeft.justPressed || _virtualpad.buttonRight.justPressed #end) {
 				changeAlt();
 			}
 
-			if (controls.BACK) {
+			if (controls.BACK #if mobile || _virtualpad.buttonB.justPressed #end) {
 				ClientPrefs.reloadControls(controlArray);
 				grpOptions.forEachAlive(function(spr:Alphabet) {
 					spr.alpha = 0;
@@ -562,11 +568,15 @@ class ControlsSubstate extends MusicBeatSubstate {
 						spr.alpha = 0;
 					}
 				}
+				#if mobile
+				closeSs();
+				#else
 				close();
+				#end
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 			}
 
-			if(controls.ACCEPT && nextAccept <= 0) {
+			if(controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end && nextAccept <= 0) {
 				if(optionShit[curSelected] == defaultKey) {
 					controlArray = ClientPrefs.defaultKeys.copy();
 					reloadKeys();
@@ -765,10 +775,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Camera Zooms'
-		#if !mobile
-		,'FPS Counter'
-		#end
+		'Camera Zooms',
+		'FPS Counter'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -847,22 +855,25 @@ class PreferencesSubstate extends MusicBeatSubstate
 		}
 		changeSelection();
 		reloadValues();
+		#if mobile
+		addVirtualPad(FULL, A_B);
+		#end
 	}
 
 	var nextAccept:Int = 5;
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
-		if (controls.UI_UP_P)
+		if (controls.UI_UP_P #if mobile || _virtualpad.buttonUp.justPressed #end)
 		{
 			changeSelection(-1);
 		}
-		if (controls.UI_DOWN_P)
+		if (controls.UI_DOWN_P #if mobile || _virtualpad.buttonDown.justPressed #end)
 		{
 			changeSelection(1);
 		}
 
-		if (controls.BACK) {
+		if (controls.BACK #if mobile || _virtualpad.buttonB.justPressed #end) {
 			grpOptions.forEachAlive(function(spr:Alphabet) {
 				spr.alpha = 0;
 			});
@@ -892,7 +903,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		}
 
 		if(usesCheckbox) {
-			if(controls.ACCEPT && nextAccept <= 0) {
+			if(controls.ACCEPT #if mobile || _virtualpad.buttonA.justPressed #end && nextAccept <= 0) {
 				switch(options[curSelected]) {
 					case 'FPS Counter':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
@@ -954,9 +965,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 				reloadValues();
 			}
 		} else {
-			if(controls.UI_LEFT || controls.UI_RIGHT) {
-				var add:Int = controls.UI_LEFT ? -1 : 1;
-				if(holdTime > 0.5 || controls.UI_LEFT_P || controls.UI_RIGHT_P)
+			if(controls.UI_LEFT || controls.UI_RIGHT #if mobile || _virtualpad.buttonLeft.pressed || _virtualpad.buttonRight.pressed #end) {
+				var add:Int = controls.UI_LEFT #if mobile || _virtualpad.buttonLeft.pressed #end ? -1 : 1;
+				if(holdTime > 0.5 || controls.UI_LEFT_P || controls.UI_RIGHT_P#if mobile || _virtualpad.buttonLeft.justPressed || _virtualpad.buttonRight.justPressed #end)
 				switch(options[curSelected]) {
 					case 'Framerate':
 						ClientPrefs.framerate += add;
