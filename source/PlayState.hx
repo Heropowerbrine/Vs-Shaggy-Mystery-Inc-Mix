@@ -2735,9 +2735,9 @@ class PlayState extends MusicBeatState
 
 		if (bgEdit)
 		{
-			if (FlxG.keys.justPressed.UP)
+			if (FlxG.keys.justPressed.UP || getJustPressed(2) || getJustPressed(7))
 				bgTarget ++;
-			if (FlxG.keys.justPressed.DOWN)
+			if (FlxG.keys.justPressed.DOWN || getJustPressed(1) || getJustPressed(6))
 				bgTarget --;
 		}
 		/*if (FlxG.keys.justPressed.NINE)
