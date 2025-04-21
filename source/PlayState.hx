@@ -4694,43 +4694,88 @@ class PlayState extends MusicBeatState
 		var down = getPressed(1) || controls.NOTE_DOWN;
 		var left = getPressed(0) || controls.NOTE_LEFT;
 
-		var K1 = getPressed(0) || controls.A1 || controls.B1;
-		var K2 = getPressed(1) || controls.A2 || controls.B2;
-		var K3 = getPressed(2) || controls.A3 || controls.B3;
-		var K4 = getPressed(3) || controls.A4 || controls.B4;
-		var K5 = getPressed(4) || controls.A5 || controls.B5;
-		var K6 = getPressed(5) || controls.A6 || controls.B6;
-		var K7 = getPressed(6) || controls.A7 || controls.B7;
-		var K8 = getPressed(7) || controls.B8;
-		var K9 = getPressed(8) || controls.B9;
+		var AK1 = getPressed(0) || controls.A1;
+		var AK2 = getPressed(1) || controls.A2;
+		var AK3 = getPressed(2) || controls.A3;
+		var AK4 = getPressed(3) || controls.A5;
+		var AK5 = getPressed(4) || controls.A6;
+		var AK6 = getPressed(5) || controls.A7;
 
-		var K1P = getJustPressed(0) || controls.A1_P || controls.B1_P;
-		var K2P = getJustPressed(1) || controls.A2_P || controls.B2_P;
-		var K3P = getJustPressed(2) || controls.A3_P || controls.B3_P;
-		var K4P = getJustPressed(3) || controls.A4_P || controls.B4_P;
-		var K5P = getJustPressed(4) || controls.A5_P || controls.B5_P;
-		var K6P = getJustPressed(5) || controls.A6_P || controls.B6_P;
-		var K7P = getJustPressed(6) || controls.A7_P || controls.B7_P;
-		var K8P = getJustPressed(7) || controls.B8_P;
-		var K9P = getJustPressed(8) || controls.B9_P;
+		var K1 = getPressed(0) || controls.A1;
+		var K2 = getPressed(1) || controls.A2;
+		var K3 = getPressed(2) || controls.A3;
+		var K4 = getPressed(3) || controls.A4;
+		var K5 = getPressed(4) || controls.A5;
+		var K6 = getPressed(5) || controls.A6;
+		var K7 = getPressed(6) || controls.A7;
 
-		var K1R = getReleased(0) || controls.A1_R || controls.B1_R;
-		var K2R = getReleased(1) || controls.A2_R || controls.B2_R;
-		var K3R = getReleased(2) || controls.A3_R || controls.B3_R;
-		var K4R = getReleased(3) || controls.A4_R || controls.B4_R;
-		var K5R = getReleased(4) || controls.A5_R || controls.B5_R;
-		var K6R = getReleased(5) || controls.A6_R || controls.B6_R;
-		var K7R = getReleased(6) || controls.A7_R || controls.B7_R;
-		var K8R = getReleased(7) || controls.B8_R;
-		var K9R = getReleased(8) || controls.B9_R;
+		var BK1 = getPressed(0) || controls.B1;
+		var BK2 = getPressed(1) || controls.B2;
+		var BK3 = getPressed(2) || controls.B3;
+		var BK4 = getPressed(3) || controls.B4;
+		var BK5 = getPressed(4) || controls.B5;
+		var BK6 = getPressed(5) || controls.B6;
+		var BK7 = getPressed(6) || controls.B7;
+		var BK8 = getPressed(7) || controls.B8;
+		var BK9 = getPressed(8) || controls.B9;
+
+		var AK1P = getJustPressed(0) || controls.A1_P;
+		var AK2P = getJustPressed(1) || controls.A2_P;
+		var AK3P = getJustPressed(2) || controls.A3_P;
+		var AK4P = getJustPressed(3) || controls.A5_P;
+		var AK5P = getJustPressed(4) || controls.A6_P;
+		var AK6P = getJustPressed(5) || controls.A7_P;
+
+		var K1P = getJustPressed(0) || controls.A1_P;
+		var K2P = getJustPressed(1) || controls.A2_P;
+		var K3P = getJustPressed(2) || controls.A3_P;
+		var K4P = getJustPressed(3) || controls.A4_P;
+		var K5P = getJustPressed(4) || controls.A5_P;
+		var K6P = getJustPressed(5) || controls.A6_P;
+		var K7P = getJustPressed(6) || controls.A7_P;
+
+		var BK1P = getJustPressed(0) || controls.B1_P;
+		var BK2P = getJustPressed(1) || controls.B2_P;
+		var BK3P = getJustPressed(2) || controls.B3_P;
+		var BK4P = getJustPressed(3) || controls.B4_P;
+		var BK5P = getJustPressed(4) || controls.B5_P;
+		var BK6P = getJustPressed(5) || controls.B6_P;
+		var BK7P = getJustPressed(6) || controls.B7_P;
+		var BK8P = getJustPressed(7) || controls.B8_P;
+		var BK9P = getJustPressed(8) || controls.B9_P;
+
+		var AK1R = getReleased(0) || controls.A1_R;
+		var AK2R = getReleased(1) || controls.A2_R;
+		var AK3R = getReleased(2) || controls.A3_R;
+		var AK4R = getReleased(3) || controls.A5_R;
+		var AK5R = getReleased(4) || controls.A6_R;
+		var AK6R = getReleased(5) || controls.A7_R;
+
+		var K1R = getReleased(0) || controls.A1_R;
+		var K2R = getReleased(1) || controls.A2_R;
+		var K3R = getReleased(2) || controls.A3_R;
+		var K4R = getReleased(3) || controls.A4_R;
+		var K5R = getReleased(4) || controls.A5_R;
+		var K6R = getReleased(5) || controls.A6_R;
+		var K7R = getReleased(6) || controls.A7_R;
+
+		var BK1R = getReleased(0) || controls.B1_R;
+		var BK2R = getReleased(1) || controls.B2_R;
+		var BK3R = getReleased(2) || controls.B3_R;
+		var BK4R = getReleased(3) || controls.B4_R;
+		var BK5R = getReleased(4) || controls.B5_R;
+		var BK6R = getReleased(5) || controls.B6_R;
+		var BK7R = getReleased(6) || controls.B7_R;
+		var BK8R = getReleased(7) || controls.B8_R;
+		var BK9R = getReleased(8) || controls.B9_R;
 
 		var sH = [
-			K1,
-			K2,
-			K3,
-			K4,
-			K5,
-			K6
+			AK1,
+			AK2,
+			AK3,
+			AK4,
+			AK5,
+			AK6
 		];
 
 		var vH = [
@@ -4744,25 +4789,25 @@ class PlayState extends MusicBeatState
 		];
 
 		var nH = [
-			K1,
-			K2,
-			K3,
-			K4,
-			K5,
-			K6,
-			K7,
-			K8,
-			K9
+			BK1,
+			BK2,
+			BK3,
+			BK4,
+			BK5,
+			BK6,
+			BK7,
+			BK8,
+			BK9
 		];
 
 
 		var sP = [
-			K1P,
-			K2P,
-			K3P,
-			K4P,
-			K5P,
-			K6P
+			AK1P,
+			AK2P,
+			AK3P,
+			AK4P,
+			AK5P,
+			AK6P
 		];
 
 		var vP = [
@@ -4776,25 +4821,25 @@ class PlayState extends MusicBeatState
 		];
 
 		var nP = [
-			K1P,
-			K2P,
-			K3P,
-			K4P,
-			K5P,
-			K6P,
-			K7P,
-			K8P,
-			K9P
+			BK1P,
+			BK2P,
+			BK3P,
+			BK4P,
+			BK5P,
+			BK6P,
+			BK7P,
+			BK8P,
+			BK9P
 		];
 
 
 		var sR = [
-			K1R,
-			K2R,
-			K3R,
-			K4R,
-			K5R,
-			K6R
+			AK1R,
+			AK2R,
+			AK3R,
+			AK4R,
+			AK5R,
+			AK6R
 		];
 
 		var vR = [
@@ -4808,15 +4853,15 @@ class PlayState extends MusicBeatState
 		];
 
 		var nR = [
-			K1R,
-			K2R,
-			K3R,
-			K4R,
-			K5R,
-			K6R,
-			K7R,
-			K8R,
-			K9R
+			BK1R,
+			BK2R,
+			BK3R,
+			BK4R,
+			BK5R,
+			BK6R,
+			BK7R,
+			BK8R,
+			BK9R
 		];
 
 		var upP = getJustPressed(2) || controls.NOTE_UP_P;
